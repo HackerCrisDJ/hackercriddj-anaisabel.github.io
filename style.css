@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #c703dd;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+    padding: 10px 20px;
+  font-size: 18px;
+  background-color: #cb548f;
+  color: rgb(171, 171, 171);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.corazon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 0, 0, 0.888);
+  transform: rotate(45deg);
+  animation: flotar 4s linear forwards;
+}
+
+.corazon::before,
+.corazon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 36, 123);
+  border-radius: 50%;
+}
+
+.corazon::before {
+  top: -10px;
+  left: 0;
+}
+
+.corazon::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes flotar {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(30deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px) scale(1.5) rotate(60deg);
+  }
+}
